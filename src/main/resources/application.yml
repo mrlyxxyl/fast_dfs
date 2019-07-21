@@ -1,0 +1,26 @@
+server:
+  port: 8899
+fdfs:
+  connect-timeout: 10000
+  so-timeout: 3000
+  tracker-list:
+    - 10.40.40.93:22122
+spring:
+  datasource:
+    url: jdbc:mysql://10.40.40.139:3306/fast_dfs
+    password: root
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  http:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    servlet:
+      content-type: text/html
+  servlet:
+    multipart:
+      max-file-size: 20971520  #20M
